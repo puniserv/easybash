@@ -28,5 +28,10 @@ You can use custom shortcuts:
    `dh ps` = `docker-compose ps`  
    `dh stop` = `docker-compose stop`  
    ...
-  
+ 
+You can add some custom commands like: 
+    Composer install `dh composer` = `docker-compose exec web su -c "composer install -d {ABSOLUTE_PROJECT_PATH}" -s "/bin/bash" nginx`
+    Yii migrate  `dh migrate` = `docker-compose exec web {ABSOLUTE_PROJECT_PATH}/yiic migrate up`
+    Yii2 migrate  `dh migrate` = `docker-compose exec web {ABSOLUTE_PROJECT_PATH}/yii migrate/up 
+
   enjoy

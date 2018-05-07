@@ -11,5 +11,5 @@ case "$1" in
   'images') docker-images ;;
   'upd') docker-compose up -d ;;
   '') echo 'Supported actions: \n exec \n e (exec alias) \n other docker-compose actions:'; docker-compose ;;
-  *) docker-compose $1
+  *) docker-compose $@
 esac
